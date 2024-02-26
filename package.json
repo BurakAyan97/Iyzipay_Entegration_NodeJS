@@ -1,0 +1,29 @@
+{
+  "name": "iyz-pay_egitim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "babel src --out-dir=./build --copy-files --watch",
+    "start": "npx @babel/node",
+    "build": "babel src --out-dir=./build --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/BurakAyan97/Iyzipay_Entegration_NodeJS.git)"
+  },
+  "author": "Burak Ayan",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/register": "^7.23.7"
+  },
+  "dependencies": {
+    "iyzipay": "^2.0.61",
+    "nanoid": "^3.2.0"
+  }
+}
