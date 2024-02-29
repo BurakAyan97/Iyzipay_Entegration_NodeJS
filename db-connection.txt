@@ -1,0 +1,3 @@
+payment-system-backend
+WedA9vhqXh8PwrRe
+mongodb+srv://payment-system-backend:WedA9vhqXh8PwrRe@cluster0.jzqmyfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&appName=Cluster0

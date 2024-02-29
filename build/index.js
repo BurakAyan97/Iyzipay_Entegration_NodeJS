@@ -12,11 +12,25 @@ var _GenericErrorHandler = _interopRequireDefault(require("./middlewares/Generic
 var _ApiError = _interopRequireDefault(require("./error/ApiError"));
 var _helmet = _interopRequireDefault(require("helmet"));
 var _cors = _interopRequireDefault(require("cors"));
+var _mongoose = _interopRequireDefault(require("mongoose"));
+var _db = _interopRequireDefault(require("./db"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const envPath = _config.default?.production ? "./env/.prod" : "./env/.dev";
 _dotenv.default.config({
   path: envPath
 });
+
+//Begin mongodb connection
+_mongoose.default.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  console.log("Connected to MongoDb");
+}).catch(err => {
+  console.log(err);
+});
+//End mongodb connection
+
 const app = (0, _express.default)();
 app.use((0, _morgan.default)(process.env.LOGGER));
 app.use((0, _helmet.default)());
