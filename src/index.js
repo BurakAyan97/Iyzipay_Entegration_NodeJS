@@ -16,6 +16,7 @@ import passport from "passport";
 import DbModels from "./db";
 import Users from "./db/users";
 import Session from "./middlewares/Session";
+import routes from "./routes/index";
 
 const envPath = config?.production ? "./env/.prod" : "./env/.dev";
 
@@ -38,6 +39,7 @@ mongoose
 //End mongodb connection
 
 const app = express();
+const router = express.Router();
 
 app.use(logger(process.env.LOGGER));
 
@@ -88,6 +90,12 @@ passport.use(
 //     test: 1,
 //   });
 // });
+
+routes.forEach((routerFn, index) => {
+  routerFn(router);
+});
+
+app.use("/api", router);
 
 app.all("/test-auth", Session, (req, res) => {
   res.json({
