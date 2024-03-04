@@ -4,3 +4,4 @@ PORT=443
 LOGGER=dev
 MONGO_URI=mongodb+srv://payment-system-backend:WedA9vhqXh8PwrRe@cluster0.jzqmyfa.mongodb.net/payments-system-development?retryWrites=true&w=majority&appName=Cluster0
 JWT_SECRET=SDFJSLDfkjdskfjsdf1213_asdawESD
+ENDPOINT:https://127.0.0.1/api
