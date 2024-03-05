@@ -4,4 +4,4 @@ PORT=8080
 LOGGER=tiny
 MONGO_URI=mongodb+srv://payment-system-backend:WedA9vhqXh8PwrRe@cluster0.jzqmyfa.mongodb.net/payments-system-production?retryWrites=true&w=majority&appName=Cluster0
 JWT_SECRET=SDFJSLDfkjdskfjsdf1213_asdawESD
-ENDPOINT:https://asdsadas.heroku.com/api
+ENDPOINT:https://burakayan-payment.herokuapp.com/api
